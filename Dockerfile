@@ -39,11 +39,12 @@ rm -rf /opt/tomcat/webapps/ROOT
 
 # Add admin/admin user
 ADD tomcat-users.xml /opt/tomcat/conf/
+ADD server.xml /opt/tomcat/conf/
 
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $PATH:$CATALINA_HOME/bin
 
-EXPOSE 8080
+EXPOSE 8083
 EXPOSE 8009
 VOLUME "/opt/tomcat/webapps"
 WORKDIR /opt/tomcat
